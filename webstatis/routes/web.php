@@ -22,9 +22,16 @@ Route::get('/', 'HomeController@home');
 Route::get('/form', 'AuthController@form');
 
 Route::get('/welcome', 'AuthController@welcome');
-// Route::get('/form', function(){
-//     return view('form');
-// });
+
+Route::get('/master', function(){
+    return view('adminlte/master');
+});
+Route::get('/table', function(){
+    return view('adminlte/item/table');
+});
+Route::get('/data-table', function(){
+    return view('adminlte/item/datatable');
+});
 
 // Route::get('/welcome', function(){
 //     return view('welcome');
