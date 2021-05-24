@@ -1,7 +1,7 @@
 @extends('adminlte.master')
 
 @section('content')
-    <a href="/cast/create" class="btn btn-primary">Tambah</a>
+    <a href="{{route('cast.create')}}" class="btn btn-primary">Tambah</a>
         <table class="table">
             <thead class="thead-light">
             <tr>
@@ -20,7 +20,7 @@
                         <td>{{$value->umur}}</td>
                         <td>{{$value->bio}}</td>
                         <td>
-                            <a href="/cast/{{$value->id}}" class="btn btn-info">Show</a>
+                            <a href="{{route('cast.show',['cast' =>$value->id])}}" class="btn btn-info">Show</a>
                             <a href="/cast/{{$value->id}}/edit" class="btn btn-primary">Edit</a>
                             <form action="/cast/{{$value->id}}" method="POST">
                                 @csrf
