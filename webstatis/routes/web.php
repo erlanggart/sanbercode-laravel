@@ -19,6 +19,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@home');
 
+Route::get('/cast', 'CastController@index');
+Route::post('/cast', 'CastController@store');
+Route::get('/cast/create', 'CastController@create');
+Route::get('/cast/{cast_id}', 'CastController@show');
+Route::get('/cast/{cast_id}/edit', 'CastController@edit');
+Route::put('/cast/{cast_id}', 'CastController@update');
+Route::delete('/cast/{cast_id}', 'CastController@destroy');
+
+
 Route::get('/form', 'AuthController@form');
 
 Route::get('/welcome', 'AuthController@welcome');

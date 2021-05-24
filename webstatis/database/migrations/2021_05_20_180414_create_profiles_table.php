@@ -18,9 +18,6 @@ class CreateProfilesTable extends Migration
             $table->integer('umur');
             $table->string('bio')->nullable();
             $table->string('alamat');
-            $table->unsignedBigInteger('user_id');
-            
-            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
